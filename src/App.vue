@@ -1,26 +1,20 @@
 <template>
-  <img class="rounded-full bg-red-700" alt="Vue logo" src="./assets/logo.png" >
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div class="flex flex-row">
+  <MainPanel/>
+  <TariffList :tariffs="[5, 10, 15, 20]"/>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainPanel from "./components/MainPanel.vue";
+import TariffList from "./components/TariffList.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  components: { MainPanel, TariffList },
+  name: "App",
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
