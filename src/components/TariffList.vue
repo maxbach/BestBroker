@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex-grow pr-40">
     <template v-for="tariff in tariffs" :key="tariff">
       <Tariff :comission="tariff"></Tariff>
     </template>
