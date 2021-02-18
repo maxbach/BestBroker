@@ -1,5 +1,5 @@
 <template>
-<div class="flex flex-row">
+<div class="h-screen flex flex-row bg-gray-100">
   <MainPanel/>
   <TariffList :tariffs="[5, 10, 15, 20]"/>
 </div>
