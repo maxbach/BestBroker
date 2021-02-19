@@ -9,13 +9,16 @@
     </h1>
     <div>
       <p class="text-sm pb-4">На какую сумму в месяц вы будете покупать акции?</p>
-      <input class="py-2 pl-3 rounded-lg border-2 border-gray-300" type="text"/>
+      <input class="py-2 pl-3 rounded-lg border-2 border-gray-300" type="text" @input="$emit('change-text', $event.target.value)"/>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Vue } from 'vue-class-component';
+import { Options, Vue } from 'vue-class-component';
 
+@Options({
+  emits: ["change-text"]
+})
 export default class MainPanel extends Vue {}
 </script>

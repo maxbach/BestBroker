@@ -23,7 +23,7 @@
 
 <script lang="ts">
 // eslint-disable-next-line no-unused-vars
-import { TariffDto } from './TariffDto';
+import { TariffDto } from '../domain/TariffDto';
 import { Vue } from "vue-class-component";
 
 class Props {
