@@ -1,23 +1,27 @@
 <template>
   <div class="flex-grow pr-40">
     <template v-for="tariff in tariffs" :key="tariff">
-      <Tariff :comission="tariff"></Tariff>
+      <Tariff :tariff="tariff"></Tariff>
     </template>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+
+import { Vue, Options } from 'vue-class-component';
 import Tariff from "./Tariff.vue";
+// eslint-disable-next-line no-unused-vars
+import { TariffDto } from './TariffDto';
 
-export default {
-  components: { Tariff },
-  name: "TariffList",
-  props: {
-    tariffs: Array,
+class Props {
+  tariffs!: TariffDto[]
+}
+
+@Options({
+  components: {
+    Tariff
   },
-};
-</script>
+})
+export default class TariffList extends Vue.with(Props) {}
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
+</script>

@@ -1,20 +1,22 @@
 <template>
 <div class="h-screen flex flex-row bg-gray-100">
   <MainPanel/>
-  <TariffList :tariffs="[5, 10, 15, 20]"/>
+  <TariffList :tariffs="tariffs"/>
 </div>
 </template>
 
-<script>
-import MainPanel from "./components/MainPanel.vue";
-import TariffList from "./components/TariffList.vue";
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+import MainPanel from './components/MainPanel.vue';
+import TariffList from './components/TariffList.vue';
+import { getTariffs } from "./components/TariffDto";
 
-export default {
-  components: { MainPanel, TariffList },
-  name: "App",
-};
+@Options({
+  components: {
+    MainPanel, TariffList
+  },
+})
+export default class App extends Vue {
+  tariffs = getTariffs()
+}
 </script>
-
-<style>
-
-</style>
