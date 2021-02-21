@@ -8,4 +8,5 @@ export interface TariffDto {
     minMonthCommission: number,
     depositoryFee: number,
     subscriptionFee: number,
+    brokerName: string
 }

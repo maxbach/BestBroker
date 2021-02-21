@@ -1,10 +1,12 @@
 import { TariffDto } from "./TariffDto";
 import { TariffViewState } from "../components/viewstate/TariffViewState";
-import { tariffs } from "./GetTariffUseCase";
+import { tariffs } from "./Tariffs";
 
 export function countTariffs(monthSum: number): TariffViewState[] {
   return tariffs.map(function(tariff) {
     return buildViewState(tariff, countCommission(tariff, monthSum));
+  }).sort(function(a, b) {
+      return Number.parseFloat(a.commission) - Number.parseFloat(b.commission)
   });
 }
 
@@ -23,7 +25,7 @@ function buildViewState(dto: TariffDto, commission: number): TariffViewState {
     imageUrl: dto.imageUrl,
     name: dto.name,
     url: dto.url,
-    conditionsUrl: dto.conditionsUrl
+    conditionsUrl: dto.conditionsUrl,
   };
 }
 
