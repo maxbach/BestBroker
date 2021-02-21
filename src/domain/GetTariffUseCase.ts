@@ -1,19 +1,15 @@
-import { TariffDto } from "./TariffDto";
+import { TariffDto } from "../domain/TariffDto";
 
-export function getTariffs(monthSum: string): TariffDto[] {
-    let monthSumNum = +monthSum
-    return [
-        new TariffDto(formatCommission(monthSumNum / 10.0), 'https://www.tinkoff.ru', "Best", require("../assets/tinkoff-logo.svg"), "Тинькофф"),
-        new TariffDto(formatCommission(monthSumNum / 15.0), "https://www.tinkoff.ru", "Best", "http://toplogos.ru/images/logo-tinkoff-bank.png", "Тинькофф"),
-        new TariffDto(formatCommission(monthSumNum / 20.0), "https://www.tinkoff.ru", "Best", "http://toplogos.ru/images/logo-tinkoff-bank.png", "Тинькофф"),
-        new TariffDto(formatCommission(monthSumNum / 25.0), "https://www.tinkoff.ru", "Best", "http://toplogos.ru/images/logo-tinkoff-bank.png", "Тинькофф"),
-        new TariffDto(formatCommission(monthSumNum / 30.0), "https://www.tinkoff.ru", "Best", "http://toplogos.ru/images/logo-tinkoff-bank.png", "Тинькофф")
-    ]
-}
-
-function formatCommission(monthSum: number): string {
-    if (isNaN(monthSum)) {
-        return "Incorrect input"
-    }
-    return monthSum.toFixed(1)
-}
+export let tariffs: TariffDto[] = [
+  {
+    name: "Инвестор",
+    url: "https://www.tinkoff.ru",
+    imageUrl: require("../assets/tinkoff-logo.svg"),
+    conditionsUrl: "https://acdn.tinkoff.ru/static/documents/invest-tariff-fees.pdf",
+    commissionProcent: 0.003,
+    minSumToOpen: null,
+    subscriptionFee: 0,
+    depositoryFee: 0,
+    minMonthCommission: 0,
+  }
+];

@@ -9,7 +9,7 @@
     </h1>
     <div>
       <p class="text-sm pb-4">На какую сумму в месяц вы будете покупать акции?</p>
-      <input class="py-2 pl-3 rounded-lg border-2 border-gray-300" type="text" @input="$emit('change-text', $event.target.value)"/>
+      <input class="py-2 pl-3 rounded-lg border-2 border-gray-300" type="number" @input="$emit('change-text', $event.target.value)"/>
     </div>
   </div>
 </template>

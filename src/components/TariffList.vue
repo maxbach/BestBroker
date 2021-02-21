@@ -11,10 +11,10 @@
 import { Vue, Options } from 'vue-class-component';
 import Tariff from "./Tariff.vue";
 // eslint-disable-next-line no-unused-vars
-import { TariffDto } from '../domain/TariffDto';
+import { TariffViewState } from "./viewstate/TariffViewState";
 
 class Props {
-  tariffs!: TariffDto[]
+  tariffs!: TariffViewState[]
 }
 
 @Options({

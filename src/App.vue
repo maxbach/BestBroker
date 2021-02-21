@@ -9,9 +9,9 @@
 import { Options, Vue } from 'vue-class-component';
 import MainPanel from './components/MainPanel.vue';
 import TariffList from './components/TariffList.vue';
-import { getTariffs } from "./domain/GetTariffUseCase";
 // eslint-disable-next-line no-unused-vars
-import { TariffDto } from './domain/TariffDto';
+import { TariffViewState } from './components/viewstate/TariffViewState';
+import { countTariffs } from "./domain/CountTariffsViewState";
 
 @Options({
   components: {
@@ -19,11 +19,11 @@ import { TariffDto } from './domain/TariffDto';
   },
 })
 export default class App extends Vue {
-  tariffs: TariffDto[] = []
+  tariffs: TariffViewState[] = []
 
-  countTariffs(monthSum: string) {
+  countTariffs(monthSum: number) {
     console.log(monthSum)
-    this.tariffs = getTariffs(monthSum)
+    this.tariffs = countTariffs(monthSum)
   }
 }
 </script>
