@@ -14,6 +14,7 @@
       <input
         class="py-2 pl-3 rounded-lg border-2 border-gray-300"
         type="number"
+        v-bind:value="defaultValue"
         @input="$emit('change-text', $event.target.value)"
       />
     </div>
@@ -26,5 +27,11 @@ import { Options, Vue } from "vue-class-component";
 @Options({
   emits: ["change-text"],
 })
-export default class MainPanel extends Vue {}
+export default class MainPanel extends Vue {
+  defaultValue = 10000
+  
+  mounted() {
+    this.$emit('change-text', this.defaultValue)
+  }
+}
 </script>
