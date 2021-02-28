@@ -1,7 +1,7 @@
 <template>
   <div class="my-auto px-20">
     <a href="#" class="">
-      <img src="../assets/logo.svg" />
+      <img src="../assets/bestbroker-logo.svg" />
     </a>
     <h1 class="text-4xl pt-5 pb-8">
       Поможем подобрать брокера <br />
