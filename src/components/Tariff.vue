@@ -16,7 +16,7 @@
     </div>
     <div class="tariff-footer flex justify-between pt-3 text-xs border-t-2 border-gray-100">
       <div class="text-gray-500">Тариф "{{ tariff.name }}"</div>
-      <a href="#" class="text-blue-500" v-on:click="openUrl(tariff.conditionsUrl)">Прочитать условия</a>
+      <a href="#" class="text-blue-500" v-on:click="openUrl()">Прочитать условия</a>
     </div> 
   </div>
 </template>
@@ -32,8 +32,18 @@ class Props {
 
 export default class Tariff extends Vue.with(Props) {
 
-  openUrl(url: string) {
-    window.open(url, '_blank')?.focus()
+  openUrl() {
+    let tariff = this.$props.tariff
+    
+    this.sendEventToAnalytics(tariff)
+    window.open(tariff.url, '_blank')?.focus()
+  }
+
+  sendEventToAnalytics(tariff: TariffViewState) {
+    this.$gtag.event('open_account', {
+        'tariff_name' : tariff.broker + "_" + tariff.name,
+        'sum' : tariff.userInput
+      })
   }
 
 }

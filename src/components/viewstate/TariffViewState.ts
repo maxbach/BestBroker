@@ -4,4 +4,6 @@ export interface TariffViewState {
     name: string;
     imageUrl: string;
     conditionsUrl: string;
+    broker: string;
+    userInput: number;
 }

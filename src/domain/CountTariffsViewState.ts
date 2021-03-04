@@ -4,7 +4,7 @@ import { tariffs } from "./Tariffs";
 
 export function countTariffs(monthSum: number): TariffViewState[] {
   return tariffs.map(function(tariff) {
-    return buildViewState(tariff, countCommission(tariff, monthSum));
+    return buildViewState(tariff, countCommission(tariff, monthSum), monthSum);
   }).sort(function(a, b) {
       return Number.parseFloat(a.commission) - Number.parseFloat(b.commission)
   });
@@ -19,13 +19,15 @@ function countCommission(tariff: TariffDto, monthSum: number): number {
   );
 }
 
-function buildViewState(dto: TariffDto, commission: number): TariffViewState {
+function buildViewState(dto: TariffDto, commission: number, monthSum: number): TariffViewState {
   return {
     commission: formatCommission(commission),
     imageUrl: dto.imageUrl,
     name: dto.name,
     url: dto.url,
     conditionsUrl: dto.conditionsUrl,
+    broker: dto.brokerName,
+    userInput: monthSum
   };
 }
 

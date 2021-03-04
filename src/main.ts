@@ -1,5 +1,15 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './index.css'
+import VueGtag from "vue-gtag-next";
 
-createApp(App).mount('#app')
+
+let app = createApp(App)
+
+app.use(VueGtag, {
+    property: {
+        id: "G-P7PKPYD8VK"
+    }
+})
+
+app.mount('#app')
