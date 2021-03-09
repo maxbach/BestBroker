@@ -22,7 +22,6 @@ export default class App extends Vue {
   tariffs: TariffViewState[] = []
 
   countTariffs(monthSum: number) {
-    console.log(monthSum)
     this.tariffs = countTariffs(monthSum)
   }
 }
