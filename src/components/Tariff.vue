@@ -4,7 +4,7 @@
       <div class="flex w-40">
         <img v-bind:src="tariff.imageUrl"/>
       </div>
-      <button class="px-6 py-2 text-sm text-green-50 bg-green-500 rounded-md" v-on:click="openUrl(tariff.url)">Открыть счёт</button>
+      <button class="px-6 h-10 text-sm text-green-50 bg-green-500 rounded-md" v-on:click="openUrl(tariff.url)">Открыть счёт</button>
     </div>
     <div class="flex flex-col tariff-body mb-6">
       <div class="mx-auto pb-1 text-7xl font-bold text-green-500">
