@@ -4,7 +4,7 @@
       <div class="flex w-40">
         <img v-bind:src="tariff.imageUrl"/>
       </div>
-      <button class="px-6 h-10 text-sm text-green-50 bg-green-500 rounded-md" v-on:click="openUrl(tariff.url)">Открыть счёт</button>
+      <button class="px-6 h-10 text-sm text-green-50 bg-green-500 rounded-md" v-on:click="openBroker">Открыть счёт</button>
     </div>
     <div class="flex flex-col tariff-body mb-6">
       <div class="mx-auto pb-1 text-7xl font-bold text-green-500">
@@ -16,7 +16,7 @@
     </div>
     <div class="tariff-footer flex justify-between pt-3 text-xs border-t-2 border-gray-100">
       <div class="text-gray-500">Тариф "{{ tariff.name }}"</div>
-      <a href="#" class="text-blue-500" v-on:click="openUrl()">Прочитать условия</a>
+      <a href="#" class="text-blue-500" v-on:click="openConditions">Прочитать условия</a>
     </div> 
   </div>
 </template>
@@ -32,11 +32,21 @@ class Props {
 
 export default class Tariff extends Vue.with(Props) {
 
-  openUrl() {
+  openConditions() {
+    let tariff = this.$props.tariff
+
+    this.openUrl(tariff.conditionsUrl)
+  }
+
+  openBroker() {
     let tariff = this.$props.tariff
     
     this.sendEventToAnalytics(tariff)
-    window.open(tariff.url, '_blank')?.focus()
+    this.openUrl(tariff.url)
+  }
+
+  openUrl(url: string) {
+    window.open(url, '_blank')?.focus()
   }
 
   sendEventToAnalytics(tariff: TariffViewState) {
