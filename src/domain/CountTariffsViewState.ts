@@ -3,7 +3,11 @@ import { TariffViewState } from "../components/viewstate/TariffViewState";
 import { tariffs } from "./Tariffs";
 
 export function countTariffs(monthSum: number): TariffViewState[] {
-  return tariffs.map(function(tariff) {
+  return tariffs
+  .filter(function(tariff) {
+    return tariff.isShow
+  })
+  .map(function(tariff) {
     return buildViewState(tariff, countCommission(tariff, monthSum), monthSum);
   }).sort(function(a, b) {
       return Number.parseFloat(a.commission) - Number.parseFloat(b.commission)

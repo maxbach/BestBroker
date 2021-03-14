@@ -11,7 +11,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 0,
     minMonthCommission: 0,
-    brokerName: "Альфа-Банк"
+    brokerName: "Альфа-Банк",
+    isShow: true
   },
   {
     name: "Инвестор",
@@ -23,7 +24,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 177,
     minMonthCommission: 0,
-    brokerName: "БКС"
+    brokerName: "БКС",
+    isShow: true
   },
   {
     name: "Трейдер",
@@ -35,7 +37,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 199,
     depositoryFee: 177,
     minMonthCommission: 0,
-    brokerName: "БКС"
+    brokerName: "БКС",
+    isShow: true
   },
   {
     name: "Мой онлайн",
@@ -47,7 +50,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 0,
     minMonthCommission: 0,
-    brokerName: "ВТБ"
+    brokerName: "ВТБ",
+    isShow: false
   },
   {
     name: "Инвестор стандарт",
@@ -59,7 +63,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 150,
     minMonthCommission: 0,
-    brokerName: "ВТБ"
+    brokerName: "ВТБ",
+    isShow: false
   },
   {
     name: "Профессиональный стандарт",
@@ -71,7 +76,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 150,
     minMonthCommission: 0,
-    brokerName: "ВТБ"
+    brokerName: "ВТБ",
+    isShow: false
   },
   {
     name: "FreeTrade",
@@ -83,7 +89,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 0,
     minMonthCommission: 0,
-    brokerName: "ФИНАМ"
+    brokerName: "ФИНАМ",
+    isShow: true
   },
   {
     name: "Консультационный",
@@ -95,7 +102,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 177,
     minMonthCommission: 177,
-    brokerName: "ФИНАМ"
+    brokerName: "ФИНАМ",
+    isShow: true
   },
   {
     name: "Дневной",
@@ -107,7 +115,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 177,
     minMonthCommission: 177,
-    brokerName: "ФИНАМ"
+    brokerName: "ФИНАМ",
+    isShow: true
   },
   {
     name: "Самостоятельный",
@@ -119,7 +128,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 0,
     minMonthCommission: 0,
-    brokerName: "Сбербанк"
+    brokerName: "Сбербанк",
+    isShow: false
   },
   {
     name: "КИТ-Универсал",
@@ -131,7 +141,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 0,
     minMonthCommission: 200,
-    brokerName: "КИТ Финанс"
+    brokerName: "КИТ Финанс",
+    isShow: false
   },
   {
     name: "Стандарт",
@@ -143,7 +154,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 0,
     minMonthCommission: 0,
-    brokerName: "ГазпромБанк"
+    brokerName: "ГазпромБанк",
+    isShow: false
   },
   {
     name: "Первый",
@@ -155,7 +167,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 150,
     minMonthCommission: 0,
-    brokerName: "АТОН"
+    brokerName: "АТОН",
+    isShow: false
   },
   {
     name: "Инвестор",
@@ -167,7 +180,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 0,
     minMonthCommission: 0,
-    brokerName: "ПромСвязьБанк"
+    brokerName: "ПромСвязьБанк",
+    isShow: false
   },
   {
     name: "Профессионал",
@@ -179,7 +193,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 0,
     minMonthCommission: 0,
-    brokerName: "ПромСвязьБанк"
+    brokerName: "ПромСвязьБанк",
+    isShow: false
   },
   {
     name: "Всё включено",
@@ -191,7 +206,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 0,
     minMonthCommission: 0,
-    brokerName: "Открытие"
+    brokerName: "Открытие",
+    isShow: true
   },
   {
     name: "Инвестиционный",
@@ -203,7 +219,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 0,
     minMonthCommission: 150,
-    brokerName: "Открытие"
+    brokerName: "Открытие",
+    isShow: true
   },
   {
     name: "Активный",
@@ -215,7 +232,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 150,
     minMonthCommission: 250,
-    brokerName: "АЛОР"
+    brokerName: "АЛОР",
+    isShow: false
   },
   {
     name: "Фондовый",
@@ -227,7 +245,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 300,
     minMonthCommission: 0,
-    brokerName: "IT Invest"
+    brokerName: "IT Invest",
+    isShow: false
   },
   {
     name: "Стандартный",
@@ -239,7 +258,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 0,
     minMonthCommission: 0,
-    brokerName: "Фридом Финанс (РФ)"
+    brokerName: "Фридом Финанс (РФ)",
+    isShow: true
   },
   {
     name: "Все включено",
@@ -251,7 +271,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 600,
     depositoryFee: 0,
     minMonthCommission: 0,
-    brokerName: "Фридом Финанс (РФ)"
+    brokerName: "Фридом Финанс (РФ)",
+    isShow: true
   },
   {
     name: "Инвестор",
@@ -263,7 +284,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 0,
     depositoryFee: 0,
     minMonthCommission: 0,
-    brokerName: "Тинькофф"
+    brokerName: "Тинькофф",
+    isShow: true
   },
   {
     name: "Трейдер",
@@ -275,7 +297,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 290,
     depositoryFee: 0,
     minMonthCommission: 0,
-    brokerName: "Тинькофф"
+    brokerName: "Тинькофф",
+    isShow: true
   },
   {
     name: "Премиум",
@@ -287,7 +310,8 @@ export let tariffs: TariffDto[] = [
     subscriptionFee: 3000,
     depositoryFee: 0,
     minMonthCommission: 0,
-    brokerName: "Тинькофф"
+    brokerName: "Тинькофф",
+    isShow: true
   },
   
 ];
