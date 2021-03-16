@@ -1,22 +1,23 @@
 <template>
   <div class="mb-5 pt-6 pb-5 px-6 w-full bg-white rounded-lg">
-    <div class="tariff-header flex justify-between">
-      <div class="flex w-40">
+    <div class="tariff-header">
+      <div class="flex justify-center">
         <img v-bind:src="tariff.imageUrl"/>
       </div>
-      <button class="px-6 h-10 text-sm text-green-50 bg-green-500 rounded-md" v-on:click="openBroker">Открыть счёт</button>
+      <button class="hidden px-6 h-10 text-sm text-green-50 bg-green-500 rounded-md" v-on:click="openBroker">Открыть счёт</button>
     </div>
-    <div class="flex flex-col tariff-body mb-6">
-      <div class="mx-auto pb-1 text-7xl font-bold text-green-500">
+    <div class="flex flex-col tariff-body mt-4 mb-6">
+      <div class="mx-auto pb-1 text-4xl xl:text-7xl font-bold text-green-500">
         {{ tariff.commission }} ₽
       </div>
       <div class="mx-auto text-sm">
         в месяц
       </div>
     </div>
-    <div class="tariff-footer flex justify-between pt-3 text-xs border-t-2 border-gray-100">
-      <div class="text-gray-500">Тариф "{{ tariff.name }}"</div>
-      <a href="#" class="text-blue-500" v-on:click="openConditions">Прочитать условия</a>
+    <button class="w-full h-10 text-sm text-green-50 bg-green-500 rounded-md" v-on:click="openBroker">Открыть счёт</button>
+    <div class="tariff-footer flex flex-col justify-center xl:justify-between mt-2 pt-3 text-xs xl:border-t-2 border-gray-100">
+      <div class="text-center text-gray-500">Тариф "{{ tariff.name }}"</div>
+      <a href="#" class="mt-1 text-center text-blue-500" v-on:click="openConditions">Прочитать условия</a>
     </div> 
   </div>
 </template>

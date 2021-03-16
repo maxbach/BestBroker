@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-grow pr-20 pt-64 overflow-scroll">
+  <div class="px-6 mt-8">
     <template v-for="tariff in tariffs" :key="tariff">
       <Tariff :tariff="tariff"></Tariff>
     </template>

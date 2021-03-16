@@ -8,7 +8,7 @@
     </h1>
     <div>
       <p class="text-sm pb-3">
-        На какую сумму в месяц вы будете покупать акции?
+        Какую сумму в месяц вы будете инвестировать?
       </p>
       <input
         class="py-2 pl-3 lg:w-48 w-full rounded-lg border-2 border-gray-300"
