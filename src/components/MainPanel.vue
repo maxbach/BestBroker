@@ -1,9 +1,9 @@
 <template>
-  <div class="my-auto justify-center px-6 lg:px-20 pt-4">
+  <div class="md:flex-1 my-auto px-6 lg:px-20 pt-4">
     <a href="#" class="">
-      <img src="../assets/bestbroker-logo.svg" class="w-full h-10" />
+      <img src="../assets/bestbroker-logo.svg" class="w-full md:w-44" />
     </a>
-    <h1 class="text-2xl lg:text-4xl pt-4 lg:pt-5 pb-4 lg:pb-8 text-center lg:text-left">
+    <h1 class="text-2xl lg:text-4xl pt-4 md:pt-2 lg:pt-5 pb-4 md:pb-5 lg:pb-8 text-center md:text-left">
       Поможем подобрать брокера с самой низкой комиссией
     </h1>
     <div>

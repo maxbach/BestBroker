@@ -1,5 +1,5 @@
 <template>
-<div class="xl:h-screen flex flex-col xl:flex-row bg-gray-100">
+<div class="md:h-screen flex flex-col md:flex-row bg-gray-100">
   <MainPanel v-on:change-text="countTariffs"/>
   <TariffList :tariffs="tariffs"/>
 </div>
