@@ -6,4 +6,5 @@ export interface TariffViewState {
     conditionsUrl: string;
     broker: string;
     userInput: number;
+    alertInfo: string | null;
 }

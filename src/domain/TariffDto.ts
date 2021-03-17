@@ -5,6 +5,7 @@ export interface TariffDto {
     conditionsUrl: string,
     minSumToOpen: number | null,
     commissionProcent: number,
+    depositoryCommissionProcent: number,
     minMonthCommission: number,
     depositoryFee: number,
     subscriptionFee: number,
