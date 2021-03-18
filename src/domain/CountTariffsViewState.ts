@@ -1,17 +1,27 @@
 import { TariffDto } from "./TariffDto";
 import { TariffViewState } from "../components/viewstate/TariffViewState";
 import { tariffs } from "./Tariffs";
+import { SpecialTariffDto } from "./SpecialTariffDto";
+import { specialTariffs } from "./SpecialTariffs";
 
 export function countTariffs(monthSum: number): TariffViewState[] {
-  return tariffs
+  let tariffViewStates = tariffs
   .filter(function(tariff) {
     return tariff.isShow
   })
   .map(function(tariff) {
-    return buildViewState(tariff, countCommission(tariff, monthSum), monthSum);
+    return buildViewStateForTariff(tariff, countCommission(tariff, monthSum), monthSum);
   }).sort(function(a, b) {
       return Number.parseFloat(a.commission) - Number.parseFloat(b.commission)
   });
+
+  specialTariffs.forEach(function(tariff: SpecialTariffDto) {
+    let viewState = buildViewStateForSpecialTariff(tariff, monthSum)
+
+    tariffViewStates.splice(tariff.position, 0, viewState)
+  })
+
+  return tariffViewStates;
 }
 
 function countCommission(tariff: TariffDto, monthSum: number): number {
@@ -23,7 +33,7 @@ function countCommission(tariff: TariffDto, monthSum: number): number {
   );
 }
 
-function buildViewState(dto: TariffDto, commission: number, monthSum: number): TariffViewState {
+function buildViewStateForTariff(dto: TariffDto, commission: number, monthSum: number): TariffViewState {
   return {
     commission: formatCommission(commission, dto.depositoryCommissionProcent),
     imageUrl: dto.imageUrl,
@@ -32,7 +42,22 @@ function buildViewState(dto: TariffDto, commission: number, monthSum: number): T
     conditionsUrl: dto.conditionsUrl,
     broker: dto.brokerName,
     userInput: monthSum,
-    alertInfo: fillAlert(dto)
+    alertInfo: fillAlert(dto),
+    commissionFrequency: null
+  };
+}
+
+function buildViewStateForSpecialTariff(dto: SpecialTariffDto, monthSum: number): TariffViewState {
+  return {
+    commission: dto.getTextToShow(monthSum),
+    imageUrl: dto.imageUrl,
+    name: dto.name,
+    url: dto.url,
+    conditionsUrl: dto.conditionsUrl,
+    broker: dto.brokerName,
+    userInput: monthSum,
+    alertInfo: dto.alertText,
+    commissionFrequency: dto.commissionFrequency
   };
 }
 

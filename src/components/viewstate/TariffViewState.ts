@@ -7,4 +7,5 @@ export interface TariffViewState {
     broker: string;
     userInput: number;
     alertInfo: string | null;
+    commissionFrequency: string | null;
 }

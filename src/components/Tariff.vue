@@ -22,7 +22,7 @@
       <div class="mx-auto pb-1 text-4xl xl:text-7xl font-bold text-green-500">
         {{ tariff.commission }}
       </div>
-      <div class="mx-auto text-sm">в месяц</div>
+      <div class="mx-auto text-sm"> {{getCommissionFrequencyString()}} </div>
     </div>
     <button
       class="w-full h-10 text-sm text-green-50 bg-green-500 rounded-md"
@@ -75,6 +75,16 @@ export default class Tariff extends Vue.with(Props) {
     let tariff = this.$props.tariff;
 
     window.alert(tariff.alertInfo);
+  }
+
+  getCommissionFrequencyString() {
+    let tariff = this.$props.tariff;
+
+    if (tariff.commissionFrequency !== null) {
+      return tariff.commissionFrequency
+    } else {
+      return "в месяц"
+    }
   }
 
   sendEventToAnalytics(tariff: TariffViewState) {
