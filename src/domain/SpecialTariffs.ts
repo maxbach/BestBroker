@@ -4,7 +4,7 @@ export let specialTariffs: SpecialTariffDto[] = [
   {
     name: "Начинающий",
     url: "",
-    imageUrl: require("../assets/united_traders.svg"),
+    imageUrl: require("../assets/UT.svg"),
     conditionsUrl: "https://unitedtraders.com/trading",
     brokerName: "United Traders",
     getTextToShow: function (userInput: number) {
