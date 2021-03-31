@@ -101,7 +101,7 @@ export let tariffs: TariffDto[] = [
   },
   {
     name: "FreeTrade",
-    url: "",
+    url: "https://www.finam.ru/open/order/russia/?AgencyBackOfficeID=1&agent=71d808c6-a9bd-4b01-b0ec-96ab6cc9be24&utm_source=bestbroker",
     imageUrl: require("../assets/finam.png"),
     conditionsUrl: "https://www.finam.ru/commissionrates/unified/freetrade",
     commissionProcent: 0.0001,
@@ -115,7 +115,7 @@ export let tariffs: TariffDto[] = [
   },
   {
     name: "Консультационный",
-    url: "",
+    url: "https://www.finam.ru/open/order/russia/?AgencyBackOfficeID=1&agent=71d808c6-a9bd-4b01-b0ec-96ab6cc9be24&utm_source=bestbroker",
     imageUrl: require("../assets/finam.png"),
     conditionsUrl: "https://www.finam.ru/commissionrates/unified/consult",
     commissionProcent: 0.00108,
@@ -129,7 +129,7 @@ export let tariffs: TariffDto[] = [
   },
   {
     name: "Дневной",
-    url: "",
+    url: "https://www.finam.ru/open/order/russia/?AgencyBackOfficeID=1&agent=71d808c6-a9bd-4b01-b0ec-96ab6cc9be24&utm_source=bestbroker",
     imageUrl: require("../assets/finam.png"),
     conditionsUrl: "https://www.finam.ru/commissionrates/unified/daily",
     commissionProcent: 0.00035,
