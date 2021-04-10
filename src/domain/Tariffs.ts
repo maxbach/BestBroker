@@ -3,7 +3,7 @@ import { TariffDto } from "./TariffDto";
 export let tariffs: TariffDto[] = [
   {
     name: "S",
-    url: "",
+    url: "https://www.alfadirect.ru/?platform=id246",
     imageUrl: require("../assets/alfa.svg"),
     conditionsUrl: "https://www.alfadirect.ru/uploads/%D0%A2%D0%B0%D1%80%D0%B8%D1%84%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%BB%D0%B0%D0%BD%20S.pdf",
     commissionProcent: 0.003,
@@ -17,7 +17,7 @@ export let tariffs: TariffDto[] = [
   },
   {
     name: "Альфа-Трейдер",
-    url: "",
+    url: "https://www.alfadirect.ru/?platform=id246",
     imageUrl: require("../assets/alfa.svg"),
     conditionsUrl: "https://www.alfadirect.ru/uploads/%D0%A2%D0%9F%20%D0%90%D0%BB%D1%8C%D1%84%D0%B0-%D0%A2%D1%80%D0%B5%D0%B9%D0%B4%D0%B5%D1%80.pdf",
     commissionProcent: 0.00049,
