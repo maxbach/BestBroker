@@ -41,7 +41,7 @@ export let tariffs: TariffDto[] = [
     depositoryFee: 177,
     minMonthCommission: 0,
     brokerName: "БКС",
-    isShow: true
+    isShow: false
   },
   {
     name: "Трейдер",
@@ -55,7 +55,7 @@ export let tariffs: TariffDto[] = [
     depositoryFee: 177,
     minMonthCommission: 0,
     brokerName: "БКС",
-    isShow: true
+    isShow: false
   },
   {
     name: "Мой онлайн",
@@ -283,7 +283,7 @@ export let tariffs: TariffDto[] = [
   },
   {
     name: "Стандартный",
-    url: "",
+    url: "https://freedom24.com/invite/?utm_campaign=pfu1174869",
     imageUrl: require("../assets/freedomfinance.svg"),
     conditionsUrl: "https://ffin.ru/upload/docs/02_tarif.pdf",
     commissionProcent: 0.00120,
@@ -297,7 +297,7 @@ export let tariffs: TariffDto[] = [
   },
   {
     name: "Все включено",
-    url: "",
+    url: "https://freedom24.com/invite/?utm_campaign=pfu1174869",
     imageUrl: require("../assets/freedomfinance.svg"),
     conditionsUrl: "https://ffin.ru/upload/docs/02_tarif.pdf",
     commissionProcent: 0,
@@ -311,7 +311,7 @@ export let tariffs: TariffDto[] = [
   },
   {
     name: "Инвестор",
-    url: "https://www.tinkoff.ru",
+    url: "https://www.tinkoff.ru/sl/5Q5FyLNBhkY",
     imageUrl: require("../assets/tinkoff.svg"),
     conditionsUrl: "https://acdn.tinkoff.ru/static/documents/invest-tariff-fees.pdf",
     commissionProcent: 0.003,
@@ -325,7 +325,7 @@ export let tariffs: TariffDto[] = [
   },
   {
     name: "Трейдер",
-    url: "",
+    url: "https://www.tinkoff.ru/sl/5Q5FyLNBhkY",
     imageUrl: require("../assets/tinkoff.svg"),
     conditionsUrl: "https://acdn.tinkoff.ru/static/documents/invest-tariff-trader.pdf",
     commissionProcent: 0.0005,
@@ -339,7 +339,7 @@ export let tariffs: TariffDto[] = [
   },
   {
     name: "Премиум",
-    url: "",
+    url: "https://www.tinkoff.ru/sl/5Q5FyLNBhkY",
     imageUrl: require("../assets/tinkoff.svg"),
     conditionsUrl: "https://acdn.tinkoff.ru/static/documents/invest-tariff-premium.pdf",
     commissionProcent: 0.00025,
