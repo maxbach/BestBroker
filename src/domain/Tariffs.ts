@@ -227,7 +227,7 @@ export let tariffs: TariffDto[] = [
   },
   {
     name: "Всё включено",
-    url: "",
+    url: "https://open-broker.ru/roa/?aid=40581",
     imageUrl: require("../assets/otkritie.svg"),
     conditionsUrl: "https://open-broker.ru/current_broker_tarif",
     commissionProcent: 0.0005,
@@ -241,7 +241,7 @@ export let tariffs: TariffDto[] = [
   },
   {
     name: "Инвестиционный",
-    url: "",
+    url: "https://open-broker.ru/roa/?aid=40581",
     imageUrl: require("../assets/otkritie.svg"),
     conditionsUrl: "https://open-broker.ru/current_broker_tarif",
     commissionProcent: 0.00035,
